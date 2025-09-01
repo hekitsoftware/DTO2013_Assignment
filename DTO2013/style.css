@@ -1,12 +1,60 @@
+.header {
+    display: flex;
+    align-items: flex-end;      
+    justify-content: flex-start;
+    background-image: url(images/banner-edited.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 100%;
+    padding: 20px;              
+    box-sizing: border-box;
+}
+
+/* button slice groups */
+.f-section, .o-section, .m-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 100%;
+    padding: 20px;              
+}
+
+.f-section { background-image: url(images/bush-1.jpeg); }
+.o-section { background-image: url(images/ocean_1.jpg); }
+.m-section { background-image: url(images/mountain_1.jpg); }
+
+.header-content {
+    display: flex;
+    align-items: center;        
+    gap: 20px;     
+    color: #ffffff;
+    font-size: larger;  
+}
+
+.header .logo {
+    height: auto;
+    max-height: 150px;
+    max-width: 100%;
+    margin-right: 20px;
+}
+
 body {
     display: flex;
     flex-direction: column; 
     align-items: center;     
-    justify-content: center; 
-    height: 100vh;           
+    justify-content: center;
     margin: 0;               
     font-family: Arial, sans-serif;
     text-align: center;
+    color:#CAD2C5;
+    background-color: #2F3E46;
+    width: 100%;
 }
 
 .MainContainer {
@@ -14,11 +62,44 @@ body {
     flex-direction: column;  
     align-items: center;     
     margin-top: 20px;
+    width: 100%;
 }
 
-.ButtonContainer {
-    display: flex;
-    justify-content: center; 
-    gap: 10px;               
-    margin-top: 10px;
+/* --- BUTTON STUFF --- */
+
+.nav-button{
+    color: #CAD2C5;
+    background-color: transparent;
+    border-radius: 16px;
+    border: 2px solid #CAD2C5;
+    padding: 15px 40px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.nav-button .b-text{
+    display: block;
+    font-weight: normal;
+    font-size: medium;
+    padding-bottom: 5%;
+}
+
+.nav-button .b-subtitle{
+    display: block;
+    font-weight: 300;
+    font-style: italic;
+    font-size: small;
+}
+
+.nav-button:hover{
+    transition: .3s ease all;
+    color: #2F3E46;
+    background-color: #CAD2C5;
+}
+
+@media (max-width: 600px) {
+    .nav-button {
+        width: 80%;
+        padding: 12px 0;
+    }
 }
