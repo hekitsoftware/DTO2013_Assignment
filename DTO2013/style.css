@@ -1,3 +1,8 @@
+:root{
+    --light-colour: #CAD2C5;
+    --dark-colour: #2F3E46;
+}
+
 .header {
     display: flex;
     align-items: flex-end;      
@@ -26,7 +31,7 @@
 }
 
 .f-section { background-image: url(images/bush-1.jpeg); }
-.o-section { background-image: url(images/ocean_1.jpg); }
+.o-section { background-image: url(images/ocean_blue.jpg); }
 .m-section { background-image: url(images/mountain_1.jpg); }
 
 .header-content {
@@ -52,8 +57,21 @@ body {
     margin: 0;               
     font-family: Arial, sans-serif;
     text-align: center;
-    color:#CAD2C5;
-    background-color: #2F3E46;
+    color: var(--light-colour);
+    background-color: var(--dark-colour);
+    width: 100%;
+}
+
+.page-body {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;     
+    justify-content: flex-start;
+    margin: 0;               
+    font-family: Arial, sans-serif;
+    text-align: left;
+    color: var(--light-colour);
+    background-color: var(--dark-colour);
     width: 100%;
 }
 
@@ -68,20 +86,22 @@ body {
 /* --- BUTTON STUFF --- */
 
 .nav-button{
-    color: #CAD2C5;
+    color: var(--light-colour);
     background-color: transparent;
     border-radius: 16px;
-    border: 2px solid #CAD2C5;
-    padding: 15px 40px;
+    border: 2px solid var(--light-colour);
+    padding: 15px 20%;
     text-decoration: none;
     text-align: center;
+    text-decoration: none;
 }
 
 .nav-button .b-text{
     display: block;
     font-weight: normal;
-    font-size: medium;
+    font-size: large;
     padding-bottom: 5%;
+    text-decoration: none;
 }
 
 .nav-button .b-subtitle{
@@ -89,12 +109,40 @@ body {
     font-weight: 300;
     font-style: italic;
     font-size: small;
+    text-decoration: none;
+}
+
+.navbar-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-colour);
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid var(--light-colour);
+    padding: 10px 20px;
+    text-decoration: none;
+    flex: 1;
+    margin: 0 5px;
+    max-width: 200px;
+}
+
+.navbar-button .nav-b-text{
+    display: block;
+    font-weight: normal;
+    font-size: small;
 }
 
 .nav-button:hover{
     transition: .3s ease all;
-    color: #2F3E46;
-    background-color: #CAD2C5;
+    color: var(--dark-colour);
+    background-color: var(--light-colour);
+}
+
+.navbar-button:hover{
+    transition: .3s ease all;
+    color: var(--dark-colour);
+    background-color: var(--light-colour);
 }
 
 @media (max-width: 600px) {
@@ -103,3 +151,15 @@ body {
         padding: 12px 0;
     }
 }
+
+.nav-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+    width: 100%;
+    background-color: var(--dark-colour);
+    padding: 10px 0;
+}
+
+
